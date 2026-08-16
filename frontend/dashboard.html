@@ -1,0 +1,592 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>TaskFlow - Dashboard</title>
+
+    <link
+        rel="stylesheet"
+        href="css/dashboard.css"
+    >
+
+</head>
+
+
+<body>
+
+
+    <div class="app-container">
+
+
+        <aside class="sidebar">
+
+            <div class="sidebar-logo">
+
+                <div class="logo-icon">
+                    ✓
+                </div>
+
+                <span>
+                    TaskFlow
+                </span>
+
+            </div>
+
+
+            <nav class="sidebar-nav">
+
+
+                <div class="nav-section">
+
+                    <p class="nav-title">
+                        MAIN
+                    </p>
+
+
+                    <a
+                        href="#"
+                        class="nav-item active"
+                        id="dashboardNav"
+                    >
+
+                        <span class="nav-icon">
+                            ▣
+                        </span>
+
+                        <span>
+                            Dashboard
+                        </span>
+
+                    </a>
+
+                </div>
+
+
+                <div class="nav-section">
+
+                    <p class="nav-title">
+                        TASKS
+                    </p>
+
+
+                    <a
+                        href="#"
+                        class="nav-item"
+                        id="allTasksNav"
+                    >
+
+                        <span class="nav-icon">
+                            □
+                        </span>
+
+                        <span>
+                            All Tasks
+                        </span>
+
+                    </a>
+
+
+                    <a
+                        href="#"
+                        class="nav-item"
+                        id="completedNav"
+                    >
+
+                        <span class="nav-icon">
+                            ✓
+                        </span>
+
+                        <span>
+                            Completed
+                        </span>
+
+                    </a>
+
+                </div>
+
+
+                <div class="nav-section">
+
+                    <p class="nav-title">
+                        SETTINGS
+                    </p>
+
+
+                    <a
+                        href="#"
+                        class="nav-item"
+                        id="settingsNav"
+                    >
+
+                        <span class="nav-icon">
+                            ⚙
+                        </span>
+
+                        <span>
+                            Settings
+                        </span>
+
+                    </a>
+
+                </div>
+
+            </nav>
+
+
+            <div class="sidebar-bottom">
+
+                <button
+                    class="logout-btn"
+                    id="logoutBtn"
+                >
+
+                    <span class="nav-icon">
+                        ↪
+                    </span>
+
+                    <span>
+                        Logout
+                    </span>
+
+                </button>
+
+            </div>
+
+        </aside>
+
+
+
+        <main class="main-content">
+
+
+            <header class="top-header">
+
+                <div class="header-left">
+
+                    <h1>
+                        Dashboard
+                    </h1>
+
+                </div>
+
+
+                <div class="header-right">
+
+
+                    <button
+                        class="notification-btn"
+                        id="notificationBtn"
+                    >
+
+                        🔔
+
+                        <span class="notification-dot"></span>
+
+                    </button>
+
+
+                    <div
+                        class="user-profile"
+                        id="userProfile"
+                    >
+
+                        <div class="user-avatar">
+                            P
+                        </div>
+
+                        <div class="user-info">
+
+                            <span
+                                class="user-name"
+                                id="userName"
+                            >
+                                Prince
+                            </span>
+
+                            <span class="user-role">
+                                User
+                            </span>
+
+                        </div>
+
+                        <span class="profile-arrow">
+                            ▼
+                        </span>
+
+                    </div>
+
+                </div>
+
+            </header>
+
+
+
+            <section class="dashboard-body">
+
+
+                <div class="welcome-section">
+
+                    <div>
+
+                        <p class="welcome-label">
+                            OVERVIEW
+                        </p>
+
+                        <h2>
+                            Good Morning,
+                            <span id="welcomeName">
+                                Prince
+                            </span>
+                            👋
+                        </h2>
+
+                        <p>
+                            Here's what's happening with your
+                            tasks today.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+
+                <div class="stats-grid">
+
+
+                    <div class="stat-card">
+
+                        <div class="stat-card-top">
+
+                            <div class="stat-icon total-icon">
+                                ✓
+                            </div>
+
+                            <span class="stat-label">
+                                TOTAL TASKS
+                            </span>
+
+                        </div>
+
+
+                        <div class="stat-number" id="totalTasks">
+                            0
+                        </div>
+
+                        <p class="stat-description">
+                            All your tasks
+                        </p>
+
+                    </div>
+
+
+
+                    <div class="stat-card">
+
+                        <div class="stat-card-top">
+
+                            <div class="stat-icon pending-icon">
+                                ○
+                            </div>
+
+                            <span class="stat-label">
+                                PENDING
+                            </span>
+
+                        </div>
+
+
+                        <div
+                            class="stat-number"
+                            id="pendingTasks"
+                        >
+                            0
+                        </div>
+
+                        <p class="stat-description">
+                            Tasks to complete
+                        </p>
+
+                    </div>
+
+
+
+                    <div class="stat-card">
+
+                        <div class="stat-card-top">
+
+                            <div class="stat-icon completed-icon">
+                                ✓
+                            </div>
+
+                            <span class="stat-label">
+                                COMPLETED
+                            </span>
+
+                        </div>
+
+
+                        <div
+                            class="stat-number"
+                            id="completedTasks"
+                        >
+                            0
+                        </div>
+
+                        <p class="stat-description">
+                            Tasks completed
+                        </p>
+
+                    </div>
+
+
+                </div>
+
+
+
+                <div class="tasks-header">
+
+                    <div>
+
+                        <h2>
+                            My Tasks
+                        </h2>
+
+                        <p>
+                            Manage and track your tasks
+                        </p>
+
+                    </div>
+
+
+                    <button
+                        class="add-task-btn"
+                        id="addTaskBtn"
+                    >
+
+                        <span>
+                            +
+                        </span>
+
+                        Add New Task
+
+                    </button>
+
+                </div>
+
+
+
+                <div class="task-filters">
+
+                    <button
+                        class="filter-btn active"
+                        id="filterAll"
+                    >
+                        All
+                    </button>
+
+                    <button
+                        class="filter-btn"
+                        id="filterPending"
+                    >
+                        Pending
+                    </button>
+
+                    <button
+                        class="filter-btn"
+                        id="filterCompleted"
+                    >
+                        Completed
+                    </button>
+
+                </div>
+
+
+
+                <div
+                    class="task-list"
+                    id="taskList"
+                >
+
+
+                    <div
+                        class="empty-state"
+                        id="emptyState"
+                    >
+
+                        <div class="empty-icon">
+                            ✓
+                        </div>
+
+                        <h3>
+                            No tasks yet
+                        </h3>
+
+                        <p>
+                            Create your first task to get started.
+                        </p>
+
+                        <button
+                            class="empty-add-btn"
+                            id="emptyAddBtn"
+                        >
+                            Create Your First Task
+                        </button>
+
+                    </div>
+
+                </div>
+
+
+            </section>
+
+        </main>
+
+    </div>
+
+
+
+    <div
+        class="modal-overlay"
+        id="taskModal"
+    >
+
+        <div class="task-modal">
+
+
+            <div class="modal-header">
+
+                <div>
+
+                    <h2>
+                        Create New Task
+                    </h2>
+
+                    <p>
+                        Add a new task to your list.
+                    </p>
+
+                </div>
+
+
+                <button
+                    class="modal-close"
+                    id="closeTaskModal"
+                >
+                    ×
+                </button>
+
+            </div>
+
+
+
+            <form id="taskForm">
+
+
+                <div class="form-group">
+
+                    <label for="taskTitle">
+                        Task Title
+                    </label>
+
+                    <input
+                        type="text"
+                        id="taskTitle"
+                        name="tittle"
+                        placeholder="Enter task title"
+                        required
+                    >
+
+                </div>
+
+
+
+                <div class="form-group">
+
+                    <label for="taskDescription">
+                        Description
+                    </label>
+
+                    <textarea
+                        id="taskDescription"
+                        name="discription"
+                        rows="5"
+                        placeholder="Describe your task..."
+                        required
+                    ></textarea>
+
+                </div>
+
+
+
+                <div class="form-group">
+
+                    <label for="taskStatus">
+                        Status
+                    </label>
+
+                    <select
+                        id="taskStatus"
+                        name="is_completed"
+                    >
+
+                        <option value="false">
+                            Pending
+                        </option>
+
+                        <option value="true">
+                            Completed
+                        </option>
+
+                    </select>
+
+                </div>
+
+
+
+                <div class="modal-actions">
+
+                    <button
+                        type="button"
+                        class="cancel-btn"
+                        id="cancelTaskBtn"
+                    >
+                        Cancel
+                    </button>
+
+
+                    <button
+                        type="submit"
+                        class="create-task-btn"
+                    >
+                        Create Task
+                    </button>
+
+                </div>
+
+            </form>
+
+        </div>
+
+    </div>
+
+
+
+    <script src="js/config.js"></script>
+
+    <script src="js/dashboard.js"></script>
+
+    <script src="js/tasks.js"></script>
+
+
+</body>
+
+</html>

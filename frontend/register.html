@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>TaskFlow - Create Account</title>
+
+    <link rel="stylesheet" href="css/auth.css">
+</head>
+
+<body>
+
+    <header class="navbar">
+
+        <div class="logo">
+            <span>✓</span>
+            TaskFlow
+        </div>
+
+        <a href="index.html" class="register-link">
+            Login
+        </a>
+
+    </header>
+
+
+    <main class="register-container">
+
+        <section class="login-info">
+
+            <p class="badge">TASK MANAGEMENT</p>
+
+            <h1>
+                Start organizing.
+                <span>Stay productive.</span>
+            </h1>
+
+            <p class="description">
+                Create your TaskFlow account and manage
+                your daily tasks in one simple place.
+            </p>
+
+            <div class="features">
+
+                <div class="feature">
+                    <span>✓</span>
+                    <p>Create and manage tasks</p>
+                </div>
+
+                <div class="feature">
+                    <span>✓</span>
+                    <p>Track completed tasks</p>
+                </div>
+
+                <div class="feature">
+                    <span>✓</span>
+                    <p>Keep everything organized</p>
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <section class="register-card">
+
+            <h2>Create Account 🚀</h2>
+
+            <p class="register-subtitle">
+                Create your account to get started
+            </p>
+
+
+            <form id="registerForm">
+
+                <div class="form-group">
+
+                    <label for="name">
+                        Full Name
+                    </label>
+
+                    <input
+                        type="text"
+                        id="name"
+                        name="name"
+                        placeholder="Enter your full name"
+                        autocomplete="name"
+                        required
+                    >
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label for="username">
+                        Username
+                    </label>
+
+                    <input
+                        type="text"
+                        id="username"
+                        name="username"
+                        placeholder="Choose a username"
+                        autocomplete="username"
+                        required
+                    >
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label for="email">
+                        Email Address
+                    </label>
+
+                    <input
+                        type="email"
+                        id="email"
+                        name="email"
+                        placeholder="Enter your email"
+                        autocomplete="email"
+                        required
+                    >
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label for="password">
+                        Password
+                    </label>
+
+                    <div class="password-box">
+
+                        <input
+                            type="password"
+                            id="password"
+                            name="password"
+                            placeholder="Create a password"
+                            autocomplete="new-password"
+                            required
+                        >
+
+                        <button
+                            type="button"
+                            id="togglePassword"
+                            aria-label="Show password"
+                        >
+                            👁
+                        </button>
+
+                    </div>
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label for="confirmPassword">
+                        Confirm Password
+                    </label>
+
+                    <div class="password-box">
+
+                        <input
+                            type="password"
+                            id="confirmPassword"
+                            name="confirmPassword"
+                            placeholder="Confirm your password"
+                            autocomplete="new-password"
+                            required
+                        >
+
+                        <button
+                            type="button"
+                            id="toggleConfirmPassword"
+                            aria-label="Show confirm password"
+                        >
+                            👁
+                        </button>
+
+                    </div>
+
+                </div>
+
+
+                <p
+                    id="registerError"
+                    class="error-message"
+                    aria-live="polite"
+                ></p>
+
+
+                <p
+                    id="registerSuccess"
+                    class="success-message"
+                    aria-live="polite"
+                ></p>
+
+
+                <button
+                    type="submit"
+                    class="register-btn"
+                >
+                    Create Account
+                </button>
+
+            </form>
+
+
+            <p class="login-text">
+
+                Already have an account?
+
+                <a href="index.html">
+                    Login
+                </a>
+
+            </p>
+
+        </section>
+
+    </main>
+
+
+    <script src="js/auth.js"></script>
+    <script src="js/config.js"></script>
+
+</body>
+</html>

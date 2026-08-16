@@ -1,0 +1,1147 @@
+/* =========================================================
+   TASK MANAGEMENT - DASHBOARD CSS
+========================================================= */
+
+
+/* =========================================================
+   1. RESET
+========================================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #f5f7fb;
+    color: #1f2937;
+}
+
+
+/* Remove default link styling */
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+
+/* Remove button default styling */
+
+button {
+    font-family: inherit;
+    cursor: pointer;
+}
+
+
+/* =========================================================
+   2. MAIN APP
+========================================================= */
+
+.app-container {
+    display: flex;
+    min-height: 100vh;
+}
+
+
+/* =========================================================
+   3. SIDEBAR
+========================================================= */
+
+.sidebar {
+    width: 250px;
+    min-height: 100vh;
+
+    background: #111827;
+    color: #ffffff;
+
+    display: flex;
+    flex-direction: column;
+
+    position: fixed;
+    left: 0;
+    top: 0;
+    bottom: 0;
+}
+
+
+/* Logo */
+
+.sidebar-logo {
+    height: 80px;
+
+    display: flex;
+    align-items: center;
+
+    gap: 12px;
+
+    padding: 0 25px;
+
+    border-bottom: 1px solid #273244;
+
+    font-size: 22px;
+    font-weight: 700;
+}
+
+
+/* Logo icon */
+
+.logo-icon {
+    width: 38px;
+    height: 38px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: #4f46e5;
+
+    border-radius: 10px;
+
+    font-size: 20px;
+    font-weight: bold;
+}
+
+
+/* =========================================================
+   4. SIDEBAR NAVIGATION
+========================================================= */
+
+.sidebar-nav {
+    flex: 1;
+
+    padding: 25px 15px;
+}
+
+
+.nav-section {
+    margin-bottom: 30px;
+}
+
+
+.nav-title {
+    padding: 0 12px;
+
+    margin-bottom: 10px;
+
+    font-size: 11px;
+    font-weight: 700;
+
+    letter-spacing: 1px;
+
+    color: #6b7280;
+}
+
+
+.nav-item {
+    display: flex;
+    align-items: center;
+
+    gap: 12px;
+
+    padding: 12px 14px;
+
+    margin-bottom: 5px;
+
+    border-radius: 8px;
+
+    color: #9ca3af;
+
+    font-size: 14px;
+
+    transition: 0.2s ease;
+}
+
+
+.nav-item:hover {
+    background: #1f2937;
+    color: #ffffff;
+}
+
+
+.nav-item.active {
+    background: #4f46e5;
+    color: #ffffff;
+}
+
+
+.nav-icon {
+    width: 22px;
+
+    text-align: center;
+
+    font-size: 17px;
+}
+
+
+/* =========================================================
+   5. LOGOUT
+========================================================= */
+
+.sidebar-bottom {
+    padding: 20px 15px;
+
+    border-top: 1px solid #273244;
+}
+
+
+.logout-btn {
+    width: 100%;
+
+    display: flex;
+    align-items: center;
+
+    gap: 12px;
+
+    padding: 12px 14px;
+
+    background: transparent;
+
+    border: none;
+
+    border-radius: 8px;
+
+    color: #9ca3af;
+
+    font-size: 14px;
+
+    text-align: left;
+
+    transition: 0.2s ease;
+}
+
+
+.logout-btn:hover {
+    background: #1f2937;
+    color: #ffffff;
+}
+
+
+/* =========================================================
+   6. MAIN CONTENT
+========================================================= */
+
+.main-content {
+    margin-left: 250px;
+
+    width: calc(100% - 250px);
+
+    min-height: 100vh;
+}
+
+
+/* =========================================================
+   7. TOP HEADER
+========================================================= */
+
+.top-header {
+    height: 80px;
+
+    background: #ffffff;
+
+    border-bottom: 1px solid #e5e7eb;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 0 35px;
+}
+
+
+.header-left h1 {
+    font-size: 21px;
+
+    color: #111827;
+}
+
+
+/* Header right */
+
+.header-right {
+    display: flex;
+    align-items: center;
+
+    gap: 25px;
+}
+
+
+/* =========================================================
+   8. NOTIFICATION
+========================================================= */
+
+.notification-btn {
+    position: relative;
+
+    width: 40px;
+    height: 40px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: #f9fafb;
+
+    border: 1px solid #e5e7eb;
+
+    border-radius: 50%;
+
+    font-size: 16px;
+}
+
+
+.notification-dot {
+    position: absolute;
+
+    top: 7px;
+    right: 7px;
+
+    width: 7px;
+    height: 7px;
+
+    background: #ef4444;
+
+    border-radius: 50%;
+}
+
+
+/* =========================================================
+   9. USER PROFILE
+========================================================= */
+
+.user-profile {
+    display: flex;
+    align-items: center;
+
+    gap: 10px;
+
+    cursor: pointer;
+}
+
+
+.user-avatar {
+    width: 40px;
+    height: 40px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: #4f46e5;
+
+    color: #ffffff;
+
+    border-radius: 50%;
+
+    font-size: 15px;
+    font-weight: 700;
+}
+
+
+.user-info {
+    display: flex;
+    flex-direction: column;
+
+    gap: 2px;
+}
+
+
+.user-name {
+    font-size: 14px;
+    font-weight: 600;
+
+    color: #111827;
+}
+
+
+.user-role {
+    font-size: 11px;
+
+    color: #9ca3af;
+}
+
+
+.profile-arrow {
+    margin-left: 5px;
+
+    font-size: 10px;
+
+    color: #6b7280;
+}
+
+
+/* =========================================================
+   10. DASHBOARD BODY
+========================================================= */
+
+.dashboard-body {
+    padding: 35px;
+}
+
+
+/* =========================================================
+   11. WELCOME SECTION
+========================================================= */
+
+.welcome-section {
+    margin-bottom: 30px;
+}
+
+
+.welcome-label {
+    margin-bottom: 8px;
+
+    font-size: 11px;
+    font-weight: 700;
+
+    letter-spacing: 1px;
+
+    color: #4f46e5;
+}
+
+
+.welcome-section h2 {
+    margin-bottom: 8px;
+
+    font-size: 28px;
+
+    color: #111827;
+}
+
+
+.welcome-section p {
+    color: #6b7280;
+
+    font-size: 14px;
+}
+
+
+/* =========================================================
+   12. STATISTICS
+========================================================= */
+
+.stats-grid {
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 20px;
+
+    margin-bottom: 40px;
+}
+
+
+.stat-card {
+    padding: 22px;
+
+    background: #ffffff;
+
+    border: 1px solid #e5e7eb;
+
+    border-radius: 12px;
+
+    transition: 0.2s ease;
+}
+
+
+.stat-card:hover {
+    transform: translateY(-2px);
+
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.05);
+}
+
+
+.stat-card-top {
+    display: flex;
+    align-items: center;
+
+    gap: 12px;
+
+    margin-bottom: 18px;
+}
+
+
+.stat-icon {
+    width: 40px;
+    height: 40px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 9px;
+
+    font-weight: bold;
+
+    font-size: 17px;
+}
+
+
+.total-icon {
+    background: #eef2ff;
+    color: #4f46e5;
+}
+
+
+.pending-icon {
+    background: #fff7ed;
+    color: #f97316;
+}
+
+
+.completed-icon {
+    background: #ecfdf5;
+    color: #10b981;
+}
+
+
+.stat-label {
+    font-size: 11px;
+
+    font-weight: 700;
+
+    letter-spacing: 0.6px;
+
+    color: #6b7280;
+}
+
+
+.stat-number {
+    margin-bottom: 5px;
+
+    font-size: 30px;
+
+    font-weight: 700;
+
+    color: #111827;
+}
+
+
+.stat-description {
+    font-size: 12px;
+
+    color: #9ca3af;
+}
+
+
+/* =========================================================
+   13. TASK HEADER
+========================================================= */
+
+.tasks-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    margin-bottom: 20px;
+}
+
+
+.tasks-header h2 {
+    margin-bottom: 5px;
+
+    font-size: 20px;
+
+    color: #111827;
+}
+
+
+.tasks-header p {
+    font-size: 13px;
+
+    color: #9ca3af;
+}
+
+
+/* =========================================================
+   14. ADD TASK BUTTON
+========================================================= */
+
+.add-task-btn {
+    display: flex;
+    align-items: center;
+
+    gap: 8px;
+
+    padding: 11px 18px;
+
+    background: #4f46e5;
+
+    color: #ffffff;
+
+    border: none;
+
+    border-radius: 8px;
+
+    font-size: 13px;
+    font-weight: 600;
+
+    transition: 0.2s ease;
+}
+
+
+.add-task-btn:hover {
+    background: #4338ca;
+
+    transform: translateY(-1px);
+}
+
+
+.add-task-btn span {
+    font-size: 19px;
+}
+
+
+/* =========================================================
+   15. TASK FILTERS
+========================================================= */
+
+.task-filters {
+    display: flex;
+
+    gap: 8px;
+
+    margin-bottom: 15px;
+}
+
+
+.filter-btn {
+    padding: 8px 15px;
+
+    background: #ffffff;
+
+    border: 1px solid #e5e7eb;
+
+    border-radius: 7px;
+
+    color: #6b7280;
+
+    font-size: 12px;
+
+    transition: 0.2s ease;
+}
+
+
+.filter-btn:hover {
+    border-color: #4f46e5;
+
+    color: #4f46e5;
+}
+
+
+.filter-btn.active {
+    background: #4f46e5;
+
+    border-color: #4f46e5;
+
+    color: #ffffff;
+}
+
+
+/* =========================================================
+   16. TASK LIST
+========================================================= */
+
+.task-list {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 10px;
+}
+
+
+/* =========================================================
+   17. TASK CARD
+========================================================= */
+
+.task-card {
+    display: flex;
+    align-items: center;
+
+    padding: 18px 20px;
+
+    background: #ffffff;
+
+    border: 1px solid #e5e7eb;
+
+    border-radius: 10px;
+
+    transition: 0.2s ease;
+}
+
+
+.task-card:hover {
+    border-color: #d1d5db;
+
+    box-shadow: 0 5px 18px rgba(0, 0, 0, 0.04);
+}
+
+
+.task-checkbox {
+    width: 20px;
+    height: 20px;
+
+    margin-right: 15px;
+
+    cursor: pointer;
+}
+
+
+.task-content {
+    flex: 1;
+}
+
+
+.task-title {
+    margin-bottom: 5px;
+
+    font-size: 14px;
+    font-weight: 600;
+
+    color: #111827;
+}
+
+
+.task-description {
+    margin-bottom: 7px;
+
+    font-size: 12px;
+
+    color: #6b7280;
+}
+
+
+.task-date {
+    font-size: 11px;
+
+    color: #9ca3af;
+}
+
+
+/* Completed task */
+
+.task-card.completed .task-title {
+    text-decoration: line-through;
+
+    color: #9ca3af;
+}
+
+
+.task-card.completed .task-description {
+    color: #d1d5db;
+}
+
+
+/* =========================================================
+   18. TASK ACTIONS
+========================================================= */
+
+.task-actions {
+    display: flex;
+
+    align-items: center;
+
+    gap: 7px;
+}
+
+
+.task-action-btn {
+    width: 34px;
+    height: 34px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: #f9fafb;
+
+    border: 1px solid #e5e7eb;
+
+    border-radius: 7px;
+
+    color: #6b7280;
+
+    font-size: 14px;
+
+    transition: 0.2s ease;
+}
+
+
+.task-action-btn:hover {
+    background: #eef2ff;
+
+    border-color: #c7d2fe;
+
+    color: #4f46e5;
+}
+
+
+.task-delete-btn:hover {
+    background: #fef2f2;
+
+    border-color: #fecaca;
+
+    color: #ef4444;
+}
+
+
+/* =========================================================
+   19. EMPTY STATE
+========================================================= */
+
+.empty-state {
+    padding: 55px 20px;
+
+    background: #ffffff;
+
+    border: 1px dashed #d1d5db;
+
+    border-radius: 12px;
+
+    text-align: center;
+}
+
+
+.empty-icon {
+    width: 55px;
+    height: 55px;
+
+    margin: 0 auto 15px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: #eef2ff;
+
+    color: #4f46e5;
+
+    border-radius: 50%;
+
+    font-size: 22px;
+}
+
+
+.empty-state h3 {
+    margin-bottom: 7px;
+
+    font-size: 16px;
+
+    color: #111827;
+}
+
+
+.empty-state p {
+    margin-bottom: 18px;
+
+    font-size: 13px;
+
+    color: #9ca3af;
+}
+
+
+.empty-add-btn {
+    padding: 10px 16px;
+
+    background: #4f46e5;
+
+    border: none;
+
+    border-radius: 7px;
+
+    color: #ffffff;
+
+    font-size: 12px;
+}
+
+
+/* =========================================================
+   20. MODAL OVERLAY
+========================================================= */
+
+.modal-overlay {
+    position: fixed;
+
+    inset: 0;
+
+    z-index: 1000;
+
+    display: none;
+
+    align-items: center;
+    justify-content: center;
+
+    background: rgba(17, 24, 39, 0.55);
+}
+
+
+.modal-overlay.show {
+    display: flex;
+}
+
+
+/* =========================================================
+   21. TASK MODAL
+========================================================= */
+
+.task-modal {
+    width: 500px;
+    max-width: 90%;
+
+    background: #ffffff;
+
+    border-radius: 14px;
+
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.2);
+
+    overflow: hidden;
+}
+
+
+/* Modal Header */
+
+.modal-header {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+
+    padding: 22px 24px;
+
+    border-bottom: 1px solid #e5e7eb;
+}
+
+
+.modal-header h2 {
+    margin-bottom: 5px;
+
+    font-size: 18px;
+
+    color: #111827;
+}
+
+
+.modal-header p {
+    font-size: 12px;
+
+    color: #9ca3af;
+}
+
+
+.modal-close {
+    width: 32px;
+    height: 32px;
+
+    background: #f9fafb;
+
+    border: none;
+
+    border-radius: 7px;
+
+    color: #6b7280;
+
+    font-size: 22px;
+}
+
+
+.modal-close:hover {
+    background: #f3f4f6;
+
+    color: #111827;
+}
+
+
+/* =========================================================
+   22. FORM
+========================================================= */
+
+#taskForm {
+    padding: 24px;
+}
+
+
+.form-group {
+    margin-bottom: 18px;
+}
+
+
+.form-group label {
+    display: block;
+
+    margin-bottom: 7px;
+
+    font-size: 12px;
+
+    font-weight: 600;
+
+    color: #374151;
+}
+
+
+.form-group input,
+.form-group textarea,
+.form-group select {
+    width: 100%;
+
+    padding: 11px 12px;
+
+    background: #ffffff;
+
+    border: 1px solid #d1d5db;
+
+    border-radius: 7px;
+
+    outline: none;
+
+    color: #111827;
+
+    font-size: 13px;
+
+    transition: 0.2s ease;
+}
+
+
+.form-group input:focus,
+.form-group textarea:focus,
+.form-group select:focus {
+    border-color: #4f46e5;
+
+    box-shadow: 0 0 0 3px rgba(79, 70, 229, 0.1);
+}
+
+
+.form-group textarea {
+    resize: vertical;
+
+    min-height: 110px;
+}
+
+
+/* =========================================================
+   23. MODAL ACTIONS
+========================================================= */
+
+.modal-actions {
+    display: flex;
+
+    justify-content: flex-end;
+
+    gap: 10px;
+
+    padding-top: 5px;
+}
+
+
+.cancel-btn {
+    padding: 10px 18px;
+
+    background: #ffffff;
+
+    border: 1px solid #d1d5db;
+
+    border-radius: 7px;
+
+    color: #6b7280;
+
+    font-size: 13px;
+}
+
+
+.cancel-btn:hover {
+    background: #f9fafb;
+}
+
+
+.create-task-btn {
+    padding: 10px 18px;
+
+    background: #4f46e5;
+
+    border: none;
+
+    border-radius: 7px;
+
+    color: #ffffff;
+
+    font-size: 13px;
+    font-weight: 600;
+}
+
+
+.create-task-btn:hover {
+    background: #4338ca;
+}
+
+
+/* =========================================================
+   24. RESPONSIVE
+========================================================= */
+
+@media (max-width: 1000px) {
+
+    .sidebar {
+        width: 210px;
+    }
+
+    .main-content {
+        margin-left: 210px;
+
+        width: calc(100% - 210px);
+    }
+
+    .stats-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+}
+
+
+@media (max-width: 700px) {
+
+    .sidebar {
+        position: static;
+
+        width: 100%;
+
+        min-height: auto;
+    }
+
+    .app-container {
+        flex-direction: column;
+    }
+
+    .main-content {
+        margin-left: 0;
+
+        width: 100%;
+    }
+
+    .top-header {
+        padding: 0 20px;
+    }
+
+    .dashboard-body {
+        padding: 20px;
+    }
+
+    .stats-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .tasks-header {
+        flex-direction: column;
+
+        align-items: flex-start;
+
+        gap: 15px;
+    }
+
+    .user-info,
+    .profile-arrow {
+        display: none;
+    }
+
+}
