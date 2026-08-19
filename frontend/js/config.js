@@ -1,5 +1,6 @@
 
-const API_URL = "https://task-mangement-5z3d.onrender.com";
+// The frontend and API are served from the same domain in production.
+const API_URL = "";
 
 
 
