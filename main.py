@@ -20,7 +20,8 @@ app.add_middleware(
 
     allow_origins=[
         "http://127.0.0.1:5501",
-        "http://localhost:5501"
+        "http://localhost:5501",
+        "https://task-mangement-1-p7fp.onrender.com"
     ],
 
     allow_credentials=True,
